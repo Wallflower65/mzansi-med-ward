@@ -34,11 +34,17 @@ export default function Login() {
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Mzansi Med-Ward</h2>
         <p className="text-gray-500 mb-6">Enter your Staff ID to access your shift dashboard.</p>
         
-        {error && <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md text-sm">{error}</div>}
+        {error && (
+          <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md text-sm">
+            {error}
+          </div>
+        )}
         
         <form onSubmit={handleLogin} className="flex flex-col gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Staff ID / Username</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Staff ID / Username
+            </label>
             <input 
               type="text" 
               value={username}
@@ -55,6 +61,34 @@ export default function Login() {
             Start Shift
           </button>
         </form>
+
+        <div className="mt-8 bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-900 shadow-sm">
+          <h3 className="font-bold mb-3 flex items-center gap-2">
+            👋 Try the Live Demo
+          </h3>
+          <p className="mb-3 opacity-80 text-xs">
+            Enter one of the usernames below to explore different role-based views. (No password required).
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="bg-white p-2 rounded border border-blue-50">
+              <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Doctor</span>
+              <code className="font-mono font-bold text-blue-700">dr.smith</code>
+            </div>
+            <div className="bg-white p-2 rounded border border-blue-50">
+              <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Ward Sister (PN)</span>
+              <code className="font-mono font-bold text-blue-700">sr.khumalo</code>
+            </div>
+            <div className="bg-white p-2 rounded border border-blue-50">
+              <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Enrolled Nurse</span>
+              <code className="font-mono font-bold text-blue-700">en.naidoo</code>
+            </div>
+            <div className="bg-white p-2 rounded border border-blue-50">
+              <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Nursing Aux (ENA)</span>
+              <code className="font-mono font-bold text-blue-700">ena.peters</code>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   );
