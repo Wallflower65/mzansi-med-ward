@@ -29,7 +29,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex h-screen items-center justify-center bg-slate-100">
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 p-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8 border-t-4 border-blue-600">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Mzansi Med-Ward</h2>
         <p className="text-gray-500 mb-6">Enter your Staff ID to access your shift dashboard.</p>
